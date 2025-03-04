@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@witkac/jschema": "https://npm.witkac.pl/@witkac%2fjschema/-/jschema-5.7.0.tgz",
     "vue": "^3.5.13"
   },
   "devDependencies": {
