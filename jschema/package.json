@@ -8,8 +8,9 @@
   },
   "author": "Daniel Jursza",
   "license": "ISC",
-  "module": "JSchema.es.js",
-  "typings": "JSchema.d.ts",
+  "main": "./JSchema.es.js",
+  "module": "./JSchema.es.js",
+  "typings": "./JSchema.d.ts",
   "scripts": {
     "test": "vitest run",
     "publishnpm": "npm publish --registry https://npm.witkac.pl",
