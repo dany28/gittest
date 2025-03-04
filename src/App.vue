@@ -1,6 +1,30 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
-import { wrapSchemaSimple } from "@witkac/jschema";
+import { predefineSchemaSimple, wrapSchemaSimple, schemaDirective } from "../jschema";
+
+const vSchema = schemaDirective;
+
+const def = predefineSchemaSimple();
+
+const schemaDef = def({
+  properties: {
+    firstName: {
+      type: "string",
+      default: "Daniel"
+    },
+    fullName: {
+      type: "string",
+      calc() {
+        return this.firstName + ' Jursza'
+      }
+    }
+  }
+});
+const schema = wrapSchemaSimple(schemaDef);
+
+
+
+
 </script>
 
 <template>
@@ -11,7 +35,16 @@ import { wrapSchemaSimple } from "@witkac/jschema";
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+  
   </div>
+  <div>
+    <input v-schema="schema.firstName">
+  </div>
+  <div>
+    <h1 v-schema="schema.fullName"></h1>
+  </div>
+  
+
   <HelloWorld msg="Vite + Vue" />
   <HelloWorld msg="Ok"></HelloWorld>
   <HelloWorld msg="Ok2"></HelloWorld>

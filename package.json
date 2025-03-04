@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@witkac/jschema": "file:./jschema",
     "vue": "^3.5.13"
   },
   "devDependencies": {
