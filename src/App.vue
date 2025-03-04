@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import { wrapSchemaSimple } from '@witkac/jschema'
+import HelloWorld from "./components/HelloWorld.vue";
+import { wrapSchemaSimple } from "@witkac/jschema";
 </script>
 
 <template>
